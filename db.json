@@ -1,12 +1,6 @@
 {
   "courses": [
     {
-      "title": "khoa hoc java update",
-      "price": 1003433333,
-      "description": "mo ta",
-      "id": 3
-    },
-    {
       "title": "update haha",
       "price": 23323232,
       "description": "32232323",
@@ -17,15 +11,15 @@
       "price": 10000,
       "description": "mo ta",
       "id": 5
+    },
+    {
+      "title": "sadssa",
+      "price": 20002222,
+      "description": "sldksds",
+      "id": 6
     }
   ],
   "lessons": [
-    {
-      "title": "sdsadsdasd update",
-      "content": "adsadsadasd",
-      "id": 2,
-      "courseId": 3
-    },
     {
       "title": "bai 1 khoa python",
       "content": "noi dung",

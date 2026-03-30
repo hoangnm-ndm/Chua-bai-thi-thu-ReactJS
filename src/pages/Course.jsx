@@ -5,16 +5,24 @@ import { toast } from "react-toastify";
 
 const Course = () => {
   const [courses, setCourses] = useState([]);
+  const [search, setSearch] = useState("");
+  const [sortVallue, setSortVallue] = useState("");
 
   const fetchAPI = async () => {
-    const { data } = await api.get("/courses");
-    console.log(data);
-    setCourses(data);
+    if (!sortVallue) {
+      const { data } = await api.get(`/courses?q=${search}`);
+      setCourses(data);
+    } else {
+      const { data } = await api.get(
+        `/courses?q=${search}&_sort=price&_order=${sortVallue}`
+      );
+      setCourses(data);
+    }
   };
 
   useEffect(() => {
     fetchAPI();
-  }, []);
+  }, [search, sortVallue]);
 
   const handleRemove = async (id) => {
     try {
@@ -25,8 +33,27 @@ const Course = () => {
       // toast.error(error);
     }
   };
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const handleSort = (e) => {
+    console.log(e.target.value);
+    setSortVallue(e.target.value);
+  };
+
   return (
     <div>
+      <form action="">
+        <input
+          className="form-control"
+          type="text"
+          placeholder="search course..."
+          onChange={(e) => handleSearch(e)}
+          value={search}
+        />
+      </form>
       <h1>Danh sach khoa hoc</h1>
       <Link className="btn btn-primary" to={"/add"}>
         Add new
@@ -38,7 +65,18 @@ const Course = () => {
             <th>Title</th>
             <th>Price</th>
             <th>Description</th>
-            <th>Action</th>
+            <th>
+              <select
+                name="price"
+                className="form-control"
+                onChange={(e) => handleSort(e)}
+              >
+                <option value="">Sắp xếp</option>
+                <option value="asc">Giá tăng dần</option>
+                <option value="desc">Giá giảm dần</option>
+                <option value="">Huỷ</option>
+              </select>
+            </th>
           </tr>
         </thead>
 
