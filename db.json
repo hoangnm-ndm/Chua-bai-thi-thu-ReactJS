@@ -1,0 +1,71 @@
+{
+  "courses": [
+    {
+      "title": "khoa hoc java update",
+      "price": 1003433333,
+      "description": "mo ta",
+      "id": 3
+    },
+    {
+      "title": "update haha",
+      "price": 23323232,
+      "description": "32232323",
+      "id": 4
+    },
+    {
+      "title": "them khoa moi ve python",
+      "price": 10000,
+      "description": "mo ta",
+      "id": 5
+    }
+  ],
+  "lessons": [
+    {
+      "title": "sdsadsdasd update",
+      "content": "adsadsadasd",
+      "id": 2,
+      "courseId": 3
+    },
+    {
+      "title": "bai 1 khoa python",
+      "content": "noi dung",
+      "courseId": "5",
+      "id": 3
+    },
+    {
+      "title": "sadsdsadas",
+      "content": "dasdadsdasd",
+      "courseId": "5",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "email": "hoang@gmail.com",
+      "password": "$2a$10$E/M/mUoGXW0mydSoQPpbO.nvzHVkbcOGjhHOrTE/Ab1x3O1aqT6te",
+      "fullname": "111111",
+      "id": 1,
+      "role": "admin"
+    },
+    {
+      "email": "hoang1@gmail.com",
+      "password": "$2a$10$a9yozRUCqc64yudtHnrZFuvGOATjjohU3xXngJZS8jaaOFPB1SU8S",
+      "fullname": "11211111",
+      "id": 2,
+      "role": "student"
+    },
+    {
+      "email": "hoang2@gmail.com",
+      "password": "$2a$10$rU.x16XEIC8XISmB6cegi.TeeurcPo/qf9VV.lQPezPaCA8dIrYwC",
+      "fullname": "hoanghoang2",
+      "id": 3
+    },
+    {
+      "email": "hoangnguyen@gmail.com",
+      "password": "$2a$10$KADn2P5RZR7ZSXN8y3jnMOMaQ2E2ZvOf1TTNAJtAXd8BYMQO7zciO",
+      "fullname": "hoangnguyen",
+      "id": 4,
+      "role": "admin"
+    }
+  ]
+}
